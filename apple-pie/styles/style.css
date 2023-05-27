@@ -5,11 +5,22 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: lighter;
@@ -22,3 +33,71 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+.header {
+  display: block;
+}
+
+.header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 300%;
+  text-align: center;
+  background-image: url("../images/apple-pie.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+section {
+  width: 70%;
+  margin: 0em auto;
+}
+
+.section-title {
+  padding-bottom: 1.2em;
+  font-weight: bold;
+}
+
+.section-container {
+  border-top: solid black;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  counter-reset: li;
+}
+
+.cooking {
+  text-align: justify;
+  border-top: hidden;
+}
+
+.recipe-info,
+.cooking-info {
+  display: block;
+  margin: 0 auto;
+  height: 3em;
+  margin-top: 2em;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cooking-info {
+  height: 4em;
+}
+.section-container ul,
+ol {
+  margin-left: 1em;
+  list-style: none;
+}
+
+.section-container ul li::before {
+  content: "- ";
+}
+
+.section-container ol li::before {
+  counter-increment: li;
+  content: counter(li) ") ";
+}
